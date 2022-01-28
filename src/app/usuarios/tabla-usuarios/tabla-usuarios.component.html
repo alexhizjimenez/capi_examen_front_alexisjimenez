@@ -1,0 +1,25 @@
+<div class="container my-4">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>NOMBRE</th>
+        <th>FECHA NACIMIENTO</th>
+        <th>EDAD</th>
+        <th>DOMICILIO</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let u of users; let i = index">
+        <td>{{ u.name }}</td>
+        <td>{{ u.fecha_nacimiento }}</td>
+        <td>{{ u.edad }}</td>
+        <td>
+          {{ u.user_domicilio.domicilio }} -
+          {{ u.user_domicilio.numero_exterior }} -
+          {{ u.user_domicilio.colonia }} - {{ u.user_domicilio.cp }} -
+          {{ u.user_domicilio.ciudad }} -
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
